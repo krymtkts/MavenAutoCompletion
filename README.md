@@ -1,6 +1,8 @@
 Maven Auto Completion
 =====================
 
+![PowerShell Gallery](https://img.shields.io/powershellgallery/dt/MavenAutoCompletion.svg?style=flat-square)
+
 Maven Auto Completion provides a simple auto completion of Maven 3 to PowerShell.
 
 - Ideas from [juven/maven-bash-completion: Maven Bash Auto Completion](https://github.com/juven/maven-bash-completion).
@@ -13,7 +15,7 @@ Maven Auto Completion requires greater equal than PowerShell v6.0.
 Check your PowerShell version by executing `$PSVersionTable.PSVersion`.
 
 - This module depends [`Registet-ArugmentCompleter`](https://docs.microsoft.com/en-us/powershell/module/microsoft.powershell.core/register-argumentcompleter?view=powershell-5.0) command let.
-- However PowerShell v5.x has a known issue about parameters with `-`. [Native ArgumentCompleter not invoked for inputs that begin with hyphen (-) · Issue #2912 · PowerShell/PowerShell](https://github.com/PowerShell/PowerShell/issues/2912)
+- However PowerShell v5.x has a known issue about parameters with `-`. [Native ArgumentCompleter not invoked for inputs that begin with hyphen (-) Issue  #2912 PowerShell/PowerShell](https://github.com/PowerShell/PowerShell/issues/2912)
 
 In case of PowerShell v5.x, you can use auto completion by using escape sequence <code>&#x60;</code>(backquote) like below.
 
@@ -26,6 +28,16 @@ Installation
 
 ### 1. Get module
 
+#### Installing via PowerShellGet
+
+MavenAutoCompletion is available on the PowerShell Gallery and can be installed using the PowerShellGet module.
+
+[PowerShell Gallery | MavenAutoCompletion](https://www.powershellgallery.com/packages/MavenAutoCompletion)
+
+```powershell
+Install-Module MavenAutoCompletion -AllowPrerelease -Force
+```
+
 #### Clone the repository
 
 Clone the repository to your PowerShell module path.
@@ -37,10 +49,6 @@ Sample command is below.
 cd ($env:PSModulePath -split ';')[0]
 git clone https://github.com/krymtkts/MavenAutoCompletion
 ```
-
-#### Installing via PowerShellGet
-
-Comming soon 😅
 
 ### 2. Import module
 
