@@ -1,7 +1,7 @@
 Maven Auto Completion
 =====================
 
-![PowerShell Gallery](https://img.shields.io/powershellgallery/dt/MavenAutoCompletion.svg?style=flat-square)
+[![PowerShell Gallery](https://img.shields.io/powershellgallery/dt/MavenAutoCompletion.svg?style=flat-square)](https://www.powershellgallery.com/packages/MavenAutoCompletion)
 
 Maven Auto Completion provides a simple auto completion of Maven 3 to PowerShell.
 
