@@ -12,7 +12,7 @@
     RootModule        = 'MavenAutoCompletion.psm1'
 
     # Version number of this module.
-    ModuleVersion     = '0.1'
+    ModuleVersion     = '0.2'
 
     # Supported PSEditions
     # CompatiblePSEditions = @()
@@ -27,7 +27,7 @@
     # CompanyName = 'Unknown'
 
     # Copyright statement for this module
-    Copyright         = '(c) 2019 Takatoshi Kuriyama.'
+    Copyright         = '(c) 2020 Takatoshi Kuriyama.'
 
     # Description of the functionality provided by this module
     Description       = 'Maven Auto Completion provides a simple auto completion of Maven 3 to PowerShell.'
