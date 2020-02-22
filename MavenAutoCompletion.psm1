@@ -86,7 +86,7 @@ $Completion, $FullCompletion, $PrefixiesCompletion = {
 }.Invoke()
 
 $SystemProperties = 'maven.test.skip=true', 'skipTests', 'skipITs', 'test=', 'it.test=', 'failIfNoTests=false', 'maven.surefire.debug', 'enableCiProfile=true', 'pmd.skip=true', 'checkstyle.skip=true', 'tycho.mode=maven', 'maven.javadoc.skip=true', 'gwt.compiler.skip=true', 'cobertura.skip=true', 'findbugs.skip=true', 'performRelease=true', 'gpg.skip=true', 'forkCount=0'
-$ShortSystemProperties = $SystemProperties | ForEach-Object -Process {"-D$_"}
+$ShortSystemProperties = $SystemProperties | ForEach-Object -Process { "-D$_" }
 
 # Find folders that include pom.xml.
 function MavenProjects {
@@ -134,9 +134,9 @@ function ToCompletionResult {
 
     $FilterExpression = $FilterScriptBlock.Invoke($WordToComplete)
     Write-Output -InputObject -- $Source |
-        Where-Object -FilterScript { $FilterExpression.Invoke($_) } |
-        Sort-Object |
-        ForEach-Object -Process { $ResultScriptBlock.Invoke($_)}
+    Where-Object -FilterScript { $FilterExpression.Invoke($_) } |
+    Sort-Object |
+    ForEach-Object -Process { $ResultScriptBlock.Invoke($_) }
 }
 
 # Script Block for `Register-ArgumentCompleter`
