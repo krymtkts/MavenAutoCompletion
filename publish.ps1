@@ -1,18 +1,20 @@
 Param (
     [String]$ApiKey,
-    [ValidateSet("Publish", "DryRun")]$Mode
+    [ValidateSet('Publish', 'DryRun')]$Mode
 )
 
 Copy-Item -Path 'MavenAutoCompletion.ps*' -Destination '.\MavenAutoCompletion\' -Force
 
+Invoke-ScriptAnalyzer -Path '.\MavenAutoCompletion\MavenAutoCompletion.psm1' -Recurse -Settings PSGallery
+
 switch ($Mode) {
-    "Publish" {
+    'Publish' {
         Write-Host 'Publishing module...'
-        Publish-Module -Path ".\MavenAutoCompletion" -NugetAPIKey $ApiKey -Verbose
+        Publish-Module -Path '.\MavenAutoCompletion' -NugetAPIKey $ApiKey -Verbose
     }
-    "DryRun" {
+    'DryRun' {
         Write-Host '[DRY-RUN]Publishing module...'
-        Publish-Module -Path ".\MavenAutoCompletion" -NugetAPIKey $ApiKey -Verbose -WhatIf
+        Publish-Module -Path '.\MavenAutoCompletion' -NugetAPIKey $ApiKey -Verbose -WhatIf
     }
 }
 if ($?) {
