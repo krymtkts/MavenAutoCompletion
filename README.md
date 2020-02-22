@@ -8,14 +8,19 @@ Maven Auto Completion provides a simple auto completion of Maven 3 to PowerShell
 - Ideas from [juven/maven-bash-completion: Maven Bash Auto Completion](https://github.com/juven/maven-bash-completion).
   - [License](https://github.com/juven/maven-bash-completion/blob/master/LICENSE)
 
-Requirement
------------
+Notes
+-----
+
+`findbugs` goal will remove in nearly future because FindBugs replaced to SpotBugs.
+
+Requirements
+------------
 
 Maven Auto Completion requires greater equal than PowerShell v6.0.
 Check your PowerShell version by executing `$PSVersionTable.PSVersion`.
 
 - This module depends [`Registet-ArugmentCompleter`](https://docs.microsoft.com/en-us/powershell/module/microsoft.powershell.core/register-argumentcompleter?view=powershell-5.0) command let.
-- However PowerShell v5.x has a known issue about parameters with `-`. [Native ArgumentCompleter not invoked for inputs that begin with hyphen (-) Issue  #2912 PowerShell/PowerShell](https://github.com/PowerShell/PowerShell/issues/2912)
+- PowerShell v5.x has a known issue about parameters with `-`. [Native ArgumentCompleter not invoked for inputs that begin with hyphen (-) Issue  #2912 PowerShell/PowerShell](https://github.com/PowerShell/PowerShell/issues/2912)
 
 In case of PowerShell v5.x, you can use auto completion by using escape sequence <code>&#x60;</code>(backquote) like below.
 
@@ -30,7 +35,7 @@ Installation
 
 #### Installing via PowerShellGet
 
-MavenAutoCompletion is available on the PowerShell Gallery and can be installed using the PowerShellGet module.
+MavenAutoCompletion is available on the PowerShell Gallery. You can install it with PowerShellGet module.
 
 [PowerShell Gallery | MavenAutoCompletion](https://www.powershellgallery.com/packages/MavenAutoCompletion)
 
