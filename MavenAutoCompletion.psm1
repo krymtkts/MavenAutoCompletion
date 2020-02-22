@@ -24,6 +24,7 @@ $PluginGoals = @{
     'cargo:'         = 'cargo:start', 'cargo:run', 'cargo:stop', 'cargo:deploy', 'cargo:undeploy', 'cargo:help'
     'checkstyle:'    = 'checkstyle:checkstyle', 'checkstyle:check'
     'cobertura:'     = 'cobertura:cobertura'
+    'spotbugs:'      = 'spotbugs:spotbugs', 'spotbugs:check', 'spotbugs:gui', 'spotbugs:help'
     'findbugs:'      = 'findbugs:findbugs', 'findbugs:gui', 'findbugs:help'
     'dependency:'    = 'dependency:analyze', 'dependency:analyze-dep-mgt', 'dependency:analyze-duplicate', 'dependency:analyze-only', 'dependency:analyze-report', 'dependency:build-classpath', 'dependency:copy', 'dependency:copy-dependencies', 'dependency:get', 'dependency:go-offline', 'dependency:help', 'dependency:list', 'dependency:list-repositories', 'dependency:properties', 'dependency:purge-local-repository', 'dependency:resolve', 'dependency:resolve-plugins', 'dependency:sources', 'dependency:tree', 'dependency:unpack', 'dependency:unpack-dependencies'
     'deploy:'        = 'deploy:deploy-file'
